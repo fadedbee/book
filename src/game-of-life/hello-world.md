@@ -329,6 +329,14 @@ command from within the `wasm-game-of-life/www` directory:
 ```
 npm run start
 ```
+This fails with: 
+```
+ERROR in ./node_modules/wasm-game-of-life/wasm_game_of_life_bg.wasm
+Module parse failed: Unknown element type in table: 0xNaN
+...
+```
+due to: https://github.com/rustwasm/wasm-bindgen/issues/4211
+It can be fixed by...
 
 Navigate your Web browser to [http://localhost:8080/](http://localhost:8080/)
 and you should be greeted with an alert message:
